@@ -1,0 +1,27 @@
+```terraform
+# Local .terraform directories and state files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.auto.tfvars
+
+# Terraform plan and output files
+*.plan
+*.out
+
+# Sensible variables and secrets
+*.auto.tfvars
+secrets.auto.*
+*.key
+*.pem
+
+# Logs
+*.log
+```
+
+Wait, I need to reconsider. The added files are only Terraform configuration files (.tf) and a README.md. These are source/configuration files, not build artifacts, dependencies, or temporary files that should be ignored. Following rule #6, if the changes contain only source/config files and no build artifacts, dependencies, or temp files, I should output nothing.
+
+```terraform
+
+```
